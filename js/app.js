@@ -15,7 +15,9 @@ function stopinterval(){
 }
 //reset function
 function reset(){
-    num = '';
+    digitEl.innerText = 0;
+    stopinterval();
+    num = 0;
 }
 
 //start button event handler
@@ -28,7 +30,5 @@ document.getElementById('btn-stop').addEventListener('click',function(){
 });
 //reset button event handlerd
 document.getElementById('btn-reset').addEventListener('click',function(){
-    digitEl.innerText = 0;
-    stopinterval();
-    num = 0;
+    reset();
 });
